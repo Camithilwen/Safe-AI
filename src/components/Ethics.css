@@ -1,0 +1,47 @@
+.ethicspage {
+  flex: 1;
+  display: flex; 
+  flex-direction: column;   
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+}
+.ethicsText3 {
+  max-width: 700px;  
+  align-self: flex-start;  
+  margin-left: 0;         
+  text-align: left;         
+  line-height: 1.6;
+
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+}
+
+.Ethicsrow {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Ethicscolumn {
+  float: left;
+  width: 50%; 
+}
+
+.Ethicsrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Ethicscolumn img {
+  width: 95%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 60px;
+}

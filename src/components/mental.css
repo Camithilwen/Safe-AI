@@ -1,0 +1,9 @@
+.mentalpage {
+  flex: 1;
+  display: flex; 
+  width: auto;  
+  padding: 20px;
+  align-items: left;
+  text-align: left;
+}
+
