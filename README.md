@@ -1,202 +1,160 @@
-Capstone project in progress - chatbot interface forked from talknexus
 
 
+## 1. Project Status  
 
-# TalkNexus: Ollama Chatbot Multi-Model & RAG Interface
+This project was created for a Capstone course at Shepherd University in the Fall of 2025. Due to this course ending, the development of the Safe-AI Initiative is paused, and it is not likely to continue.  
 
-A comprehensive and scalable Chatbot Application that integrates multiple language models through the Ollama API, featuring sophisticated model management, interactive chat interfaces, and RAG (Retrieval-Augmented Generation) capabilities for document analysis.
+We will not be requiring maintainers or contributors as there is no plan to continue development.  
 
-## 🌟 Key Features
+--- 
 
-- **Multi-Model Support**: Seamlessly interact with various state-of-the-art Ollama language models including DeepSeek, Llama, Mistral, and 125+ more.
-- **Model Management Interface**: Easy-to-use interface for downloading, managing, and switching between different language models.
-- **Real-time Chat Interface**:  Clean interface with model-specific chat history and streamed responses.
-- **Conversation History Management**: Save, load, and manage chat conversations with automatic titling and organized storage for easy access to previous interactions.
-- **RAG-Powered Document Analysis**: Advanced document processing system supporting PDF analysis with multiple embedding models for context-aware document querying and intelligent responses.
-- **Experiment Management**: Save, load, and track different document analysis configurations with customizable retrieval settings for reproducible results.
-- **Responsive Design**: Modern, responsive UI with animated components and intuitive navigation.
+## 2. Description  
 
-## 📽️ TalkNexus APP Video
+Safe-AI Initiative is an educational website that provides information about some of the ethical issues that are arising due to AI usage. Because of the rapid development of different AI technologies, there are environmental, societal, mental health, and general ethical issues that aren’t often highlighted. The goal of this project is for our webpages to provide accessible and clear information on these issues, as well as provide resources and ways to get involved.  
 
-https://github.com/user-attachments/assets/46b20f63-505e-424c-a93a-df60ded20051
+### 2.1 Features  
 
-## 👏 Acknowledgments
+- **Homepage**: hosts the projects goals, approach and a simple overview what AI is  
+    
 
-* [Ollama](https://ollama.com/)
-* [Langchain](https://langchain.com/)
-* [Streamlit](https://streamlit.io/)  
+- ** Webpages** dedicated to specific ethical issues that we chose to highlight  
+    
 
-## Streamlit Demo APP
+- Environmental: Highlights some of the most common environmental impacts tied to the increased development and usage of AI  
+    
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://talknexus.streamlit.app/)
+- Ethics: Provides a breakdown of the different levels of AI ethics and what falls under each of them.  
+    
 
-## 📋 Prerequisites
+- Mental Health: Explores the mental health effects seen from consistent AI usage. This page also hosts interactive chatbot, as well as its background and methodology. 
+    
 
-- Python 3.10 or higher
-- Ollama API (latest version)
-- Streamlit
-- 8GB+ RAM (varies based on model size)
+- Get involved: Hosts a plethora of links to alternative resources, ways to get involved and websites that we took inspiration from.  
+    
 
-**Important Note:** Demo Version is not able to run Ollama API, run the app locally for full feature usability.
+- Sources: The final page hosts the sources we gather information, methodology, and graphics from.  
+    
 
-## ⚙️ Installation
+- ** Images and graphics** that provides a simple, alternative way to view and understand the information on the webpages  
+    
 
-1. **Clone the Repository**
+- ** Interactive Chatbot** A side by side interactive demonstration that highlights parasocial chatbot responses and how they may be corrected.  
+    
+
+### 2.2 Background 
+
+Safe-AI Initiative was created because our team noticed a lack of education on ethical issues stemming from AI usage. The development of these technologies is continuing rapidly, as well as accessibility to the general public. Because of this, information on the harmful effects should be as easily obtainable as technology itself. The goal of this project is to provide this information in an accessible and understandable way.  
+
+--- 
+
+## 3. Installation  
+
+To run this project locally, first clone the repository using a Github GUI application or via command line: 
+
 ```bash
-git clone https://github.com/TsLu1s/talknexus.git
-cd talknexus
+
+git clone git@github.com:Camithilwen/Safe-AI.git 
+
 ```
 
-2. **Set Up Conda Environment**
+To set-up and run the React website, 
 
-First, ensure you have Conda installed. Then create and activate a new environment with Python 3.10:
+- Ensure your system is running node.js v22.20.0 or greater 
 
-```bash
-# Create new environment
-conda create -n talknexus_env python=3.10
+- Navigate your terminal to the project's root directory and run the following commands to install the required node dependencies and run the project: 
 
-# Activate the environment
-conda activate talknexus_env
+```bash 
+
+npm install 
+
+npm start 
+
 ```
 
-3. **Install Dependencies**
-```bash
-pip install -r requirements.txt
+To set-up and run the chatbot demonstration's Streamlit application, 
+
+- Ensure your system has an installation of Ollama v0.12.3 
+
+- Run the following commands to install the minimum-requried Ollama dependencies for the demonstration application and start the Ollama LLM server: 
+
+```bash 
+
+ollama pull llama3.2 
+
+ollama pull ALIENTELLIGENCE/sarahv2 
+
+ollama serve 
+
 ```
 
-4. **Install Ollama**
-   
-Visit Ollama API and follow the installation instructions for your operating system.
+- Ensure your system has an installation of Python v3.11.2 
 
+- Navigate your terminal to the project's root directory and run the following commands to initialize a new Python virtual environment, install the required Python dependencies, and run the Streamlit project: 
 
-<div align="left">
-   
-[![Download Ollama](https://img.shields.io/badge/DOWNLOAD-OLLAMA-grey?style=for-the-badge&labelColor=black)](https://ollama.com/download)
+```bash 
 
-</div>
+python -m venv .venv 
 
-5. **Start the Application**
-```bash
-streamlit run navigation.py
+source ./.venv/bin/activate 
+
+pip install -r requirements.txt 
+
+streamlit run ./src/navigation.py --server.headless True 
+
 ```
 
-## 💻 Usage & Architecture
+--- 
 
-### Home Page
-- Explore the Ollama model ecosystem with detailed model cards
-- View comprehensive information about model capabilities and specializations:
-  - Language Models, Specialized Models, Task-Specific Models, Domain-Specific Models...
-- Access quick reference for hardware requirements
-- Find links to essential documentation and resources
+## 5. Roadmap  
 
-### Model Management
-1. Navigate to the "Language Models Management" section
-2. Select and download desired models from the available list
-3. Monitor installation progress and system requirements
-4. Manage installed models through the interface
+As of now, the development on this website has been completed. No further releases are planned at this time.  
 
-### Chat Interface
-1. Select a model from the dropdown menu
-2. Enter your message in the chat input
-3. View real-time responses in the chat window
-4. Switch between models as needed
-5. Access conversation history
-   - Start new conversations
-   - Load previous conversations
-   - Continue ongoing conversations
-   - Delete unwanted conversations
+--- 
 
-### RAG Chat Interface
+## 6. Authors and Acknowledgements 
 
-1. Upload PDF documents for analysis
-2. Select embedding model and language model
-3. Configure retrieval settings with customizable chunk sizes and parent documents
-4. Save and manage experiments for reproducibility
-5. Ask questions about your documents
-6. Receive context-aware responses based on document content
+The Safe AI Initiative was created by Jamie Kemman, Alani White, and Holly White. As a team, members collaborated on research, website design, and writing.  
 
-## 🤝 Contributing
+Jamie led the development of the chatbot feature, as well as the background research and implementation of that feature.  
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Holly White and Alani White led the development and design of the website. Alani focused on conducting literature review on environmental content, and Holly focused on conducting additional survey research on perceptions of the AI industry.  
 
-## 📄 License
+--- 
 
-Distributed under the MIT License. See [LICENSE](https://github.com/TsLu1s/talknexus/blob/main/LICENSE) for more information.
+## 7. License  
 
-## 🔗 Contact 
- 
-Luis Santos - [LinkedIn](https://www.linkedin.com/in/lu%C3%ADsfssantos/)
-# Getting Started with Create React App
+MIT License 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Copyright (c) 2025 Alani White, Holly White, Jamie Kemman 
 
-## Available Scripts
+ Copyright (c) 2024 Luis Santos (TalkNexus) 
 
-In the project directory, you can run:
+Permission is hereby granted, free of charge, to any person obtaining a copy 
 
-### `npm start`
+of this software and associated documentation files (the "Software"), to deal 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+in the Software without restriction, including without limitation the rights 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
 
-### `npm test`
+copies of the Software, and to permit persons to whom the Software is 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+furnished to do so, subject to the following conditions: 
 
-### `npm run build`
+The above copyright notice and this permission notice shall be included in all 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+copies or substantial portions of the Software. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
 
-### `npm run eject`
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+SOFTWARE.
